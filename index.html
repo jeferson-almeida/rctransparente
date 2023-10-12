@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remessa Conforme Transparente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <h1>Remessa Conforme Transparente</h1>
+
+        <div>
+            <label for="valor_sem_impostos">Preço do Produto Sem Impostos (R$)</label>
+            <input type="number" id="valor_sem_impostos" min="0" step="0.01" oninput="(validity.valid || (value='')) && calcula_valor_com_impostos()">
+        </div>
+        <div>
+            <label for="valor_com_impostos">Preço do Produto Com Impostos (R$)</label>
+            <input type="number" id="valor_com_impostos" min="0" step="0.01" oninput="(validity.valid || (value='')) && calcula_valor_sem_impostos()">
+        </div>
+        <p id="p"></p>
+    </main>
+
+    <footer>
+        <p><strong>Contatos do desenvolvedor</strong></p>
+        <a class="contato" href="https://www.facebook.com/jefersonba" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/240px-Facebook_logo_%28square%29.png" alt="Ícone do Facebook">
+        </a>
+        <a class="contato" href="https://www.instagram.com/jefersonbalmeida/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" alt="Ícone do Instagram">
+        </a>
+        <a class="contato" href="https://www.linkedin.com/in/jefersonbalmeida/" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/240px-LinkedIn_logo_initials.png" alt="Ícone do LinkedIn">
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

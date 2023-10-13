@@ -12,15 +12,40 @@
     <main>
         <h1>Remessa Conforme Transparente</h1>
 
-        <div>
-            <label for="valor_sem_impostos">Preço do Produto Sem Impostos (R$)</label>
+        <div class="label">
+            <label for="valor_sem_impostos">Preço do Produto Sem Impostos:</label>
+        </div>
+        <div class="valor">
+            <label for="valor_sem_impostos">R$</label>
             <input type="number" id="valor_sem_impostos" min="0" step="0.01" oninput="(validity.valid || (value='')) && calcula_valor_com_impostos()">
         </div>
-        <div>
-            <label for="valor_com_impostos">Preço do Produto Com Impostos (R$)</label>
+        <div class="label">
+            <label for="valor_com_impostos">Preço do Produto Com Impostos:</label>
+        </div>
+        <div class="valor">
+            <label for="valor_com_impostos">R$</label>
             <input type="number" id="valor_com_impostos" min="0" step="0.01" oninput="(validity.valid || (value='')) && calcula_valor_sem_impostos()">
         </div>
-        <p id="p"></p>
+        <div class="label">
+            <label for="imposto">Valor do Imposto de Importação:</label>
+        </div>
+        <div class="valor">
+            <label for="imposto">R$</label>
+            <input type="number" id="imposto" min="0" step="0.01" disabled>
+        </div>
+        <div class="label">
+            <label for="icms">Valor do ICMS:</label>
+        </div>
+        <div class="valor">
+            <label for="icms">R$</label>
+            <input type="number" id="icms" min="0" step="0.01" disabled>
+        </div>
+        
+        <ul>
+            <li>A cotação do dólar: R$ <span id="dolar-hoje"></span></li>
+            <li>Produtos até 50 doláres são tributados em 17% de ICMS.</li>
+            <li>Produtos acima de 50 doláres são tributados em 60% de imposto de importação mais 17% de ICMS.</li>
+        </ul>
     </main>
 
     <footer>

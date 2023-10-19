@@ -38,7 +38,7 @@ const calcula_valor_sem_impostos = () => {
     } else {
         taxaImposto = taxaImposto0
     }
-    valor_sem_impostos /= 1 - taxaImposto
+    valor_sem_impostos /= 1 + taxaImposto
     document.getElementById("valor_sem_impostos").value = valor_sem_impostos.toFixed(2)
     document.getElementById("imposto").value = (valor_sem_impostos * taxaImposto).toFixed(2)
     document.getElementById("icms").value = icms.toFixed(2)
